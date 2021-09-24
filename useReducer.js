@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-const reducerFunction = (prevState, dispatchedAction) => {};
+const reducerFunction = (prevState, dispatchedActionValue) => {};
 
 const [currentState, dispatchFunction] = useReducer(reducerFunction, {
   value: "",
