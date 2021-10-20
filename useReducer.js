@@ -1,11 +1,18 @@
 import { useReducer } from "react";
 
-const reducerFunction = (prevState, dispatchedActionValue) => {};
-
-const [currentState, dispatchFunction] = useReducer(reducerFunction, {
+const defaultState = {
   value: "",
-  isValid: null,
-});
+  invalid: null,
+};
+
+const reducerFunction = (prevState, dispatchedActionValue) => {
+  return defaultState;
+};
+
+const [currentState, dispatchFunction] = useReducer(
+  reducerFunction,
+  defaultState
+);
 
 const changeHandler = (event) => {
   dispatchFunction({});
